@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 12</title>
+    </head>
+
+    <body>
+        <label for="sequencia">Sequência:</label>
+        <input type="text" id="sequencia" size="70"><br><br>
+        <button onclick="inverter()">Inverter</button>
+        <p id="resultado"></p>
+        
+        <script>
+            function inverter(){
+                let sequencia = document.getElementById("sequencia").value;
+                let resultado = "";
+                for(let i = sequencia.length - 1; i >= 0; i--){
+                    resultado += sequencia.charAt(i);
+                }
+                document.getElementById("resultado").innerHTML = "Sequência invertida: <strong>" + resultado + "</strong>";
+            }
+        </script>
+    </body>
+</html>

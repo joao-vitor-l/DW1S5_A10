@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 11</title>
+    </head>
+
+    <body>
+        <h1>Calculadora Delta Δ</h1>
+	    <form>
+            <label for="a">a:</label>
+            <input type="number" id="a" name="a"><br><br>
+
+            <label for="b">b:</label>
+            <input type="number" id="b" name="b"><br><br>
+
+            <label for="c">c:</label>
+            <input type="number" id="c" name="c"><br><br>
+
+            <input type="button" value="Calcular" onclick="calcularDelta()">
+	    </form>
+
+        <h2>Passo a passo:</h2>
+	    <p id="passo1"></p>
+        <p id="passo2"></p>
+        <p id="passo3"></p>
+
+        <h2>Resultado:</h2>
+        <p id="resultado"></p>
+
+        <script>
+            function calcularDelta(){
+                let a = parseInt(document.getElementById("a").value);
+                let b = parseInt(document.getElementById("b").value);
+                let c = parseInt(document.getElementById("c").value);
+    
+                // Passo 1
+                let b2 = Math.pow(b, 2);
+                document.getElementById("passo1").innerHTML = "b² = " + b + "² = " + b2;
+    
+                // Passo 2
+                let ac4 = 4 * a * c;
+                document.getElementById("passo2").innerHTML = "4ac = 4 x " + a + " x " + c + " = " + ac4;
+    
+                // Passo 3
+                let delta = b2 - ac4;
+                document.getElementById("passo3").innerHTML = "Δ = b² - 4ac = " + b2 + " - " + ac4 + " = " + delta;
+    
+                // Resultado
+                document.getElementById("resultado").innerHTML = "O delta da equação é <strong>" + delta + "</strong>.";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 16</title>
+    </head>
+        
+    <body>
+        <h1>Potência de 2 elevado a 8</h1>
+        <p id="resultado"></p>
+        
+        <script>
+            let base = 2;
+            let expoente = 8;
+            let passos = base + "<sup>" + (0) + "</sup> = " + 1 + "<br>";
+
+            for(let i = 1; i <= expoente; i++){
+                let resultado = Math.pow(base, i);
+                passos += base + "<sup>" + (i) + "</sup> = " + resultado + "<br>";
+            }
+
+            document.getElementById("resultado").innerHTML += passos;
+        </script>
+    </body>
+</html>

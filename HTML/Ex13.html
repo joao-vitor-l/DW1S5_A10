@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 13</title>
+    </head>
+        
+    <body>
+        <h1>Potenciação com Números Aleatórios</h1>
+        <button onclick="potencia()">Gerar Potência</button>
+        <p id="resultado"></p>
+        
+        <script>
+            function potencia(){
+                let base = Math.floor(Math.random() * 100) + 1; // Gera um número aleatório inteiro entre 1 e 100 para a base
+                let expoente = Math.floor(Math.random() * 100) + 1; // Gera um número aleatório inteiro entre 1 e 100 para o expoente
+                let potencia = 1;
+                for(let i = 1; i <= expoente; i++){
+                    potencia *= base;
+                }
+
+                document.getElementById("resultado").innerHTML = "A base é <strong>" + base +
+                    "</strong>, o expoente é <strong>" + expoente +
+                    "</strong> e a potência é <strong>" + potencia.toFixed(0) + "</strong>.";
+		    }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 10</title>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+              <th>Número</th>
+              <th>Primo</th>
+            </tr>
+            <script>
+                for(let i = 0; i <= 200; i++){
+                    let row = document.createElement('tr');
+
+                    let numCell = document.createElement('td');
+                    numCell.innerText = i;
+                    row.appendChild(numCell);
+                    
+                    let primeCell = document.createElement('td');
+                    if(isPrime(i)){
+                        primeCell.innerText = 'Sim';
+                        primeCell.style.backgroundColor = 'green';
+                    }else{
+                        primeCell.innerText = 'Não';
+                    }
+                    row.appendChild(primeCell);
+
+                    document.querySelector('table').appendChild(row);
+                }
+
+                function isPrime(num){
+                    if(num < 2){
+                        return false;
+                    }
+                    for(let i = 2; i < num; i++){
+                        if(num % i == 0){
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            </script>
+        </table>
+    </body>
+</html>

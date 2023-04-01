@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 07</title>
+    </head>
+
+    <body>
+        <p id="resultado"></p>
+        <script>
+            let somatoria = 0;
+            for(let i = 1; i < 1000; i++){
+                if(i % 3 == 0 || i % 5 == 0){
+                    somatoria += i;
+                }
+            }
+            document.getElementById("resultado").innerHTML = "A soma de múltiplos de 3 ou 5 abaixo de 1000 é igual a <strong>" + somatoria + "</strong>.";
+        </script>
+    </body>
+</html>

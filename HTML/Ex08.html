@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 08</title>
+    </head>
+
+    <body>
+        <h1>Sequência de Fibonacci</h1>
+        <p id="resultado"></p>
+        <script>
+            let primeiro = 0;
+		    let segundo = 1;
+            let somatoria = 0;
+
+            while(segundo <= 50000){
+                if(segundo % 2 == 0){
+                    somatoria += segundo;
+                }
+
+                let proximo = primeiro + segundo;
+                primeiro = segundo;
+                segundo = proximo;
+            }
+
+            document.getElementById("resultado").innerHTML = "A soma dos termos pares cujos valores não excedam cinquenta mil é igual a <strong>" + somatoria + "</strong>.";
+        </script>
+    </body>
+</html>

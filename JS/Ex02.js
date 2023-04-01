@@ -1,0 +1,9 @@
+function msgQualquer(){
+    alert("Mensagem qualquer.");
+}
+    
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function(){
+    msgQualquer();
+});

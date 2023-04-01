@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 19</title>
+    </head>
+        
+    <body>
+        <label for="sequencia">Insira uma sequência de caracteres:</label>
+        <input type="text" id="sequencia">
+        <button onclick="ordenar()">Ordenar</button>
+        <p id="original"></p>
+	    <p id="ordenado"></p>
+
+        <script>
+            function ordenar(){
+                let sequencia = document.getElementById("sequencia").value;
+                let arrayOrdenado = sequencia.split("").sort();
+                let resultado = arrayOrdenado.join("");
+                document.getElementById("original").textContent = "Sequência original: " + sequencia;
+			    document.getElementById("ordenado").textContent = "Resultado ordenado: " + resultado;
+		    }
+        </script>
+    </body>
+</html>

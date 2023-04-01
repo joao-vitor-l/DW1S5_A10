@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex. 14</title>
+    </head>
+        
+    <body>
+        <h1>Potência de 2 elevado a 8</h1>
+        <p id="resultado"></p>
+        
+        <script>
+            let base = 2;
+            let expoente = 8;
+            let resultado = 1;
+            let passos = base + "<sup>" + (0) + "</sup> = " + 1 + "<br>";
+
+            while(expoente > 0){
+                resultado *= base;
+                passos += base + "<sup>" + (8 - expoente + 1) + "</sup> = " + resultado + "<br>";
+                expoente--;
+            }
+
+            document.getElementById("resultado").innerHTML += passos;
+        </script>
+    </body>
+</html>
